@@ -25,10 +25,6 @@ let rolesValidation = function () {
 
   if (promptValue === undefined) return;
 
-  // let valueQuestion = repetitiveQuestion();
-
-  // console.log(valueQuestion);
-
   let countAdmin = 0;
   let countModer = 0;
   let countUser = 0;
@@ -37,19 +33,6 @@ let rolesValidation = function () {
   let valueQuestion = true;
 
   while (valueQuestion) {
-    // if (promptValue === "admin" && countAdmin < 1) {
-    //   countAdmin++;
-    //   console.log("CountAdmin: " + countAdmin);
-    // } else {
-    //   alert("Error - not repeat roles");
-    // }
-    // if (promptValue === "moderator" && countAdmin < 1) {
-    //   countModer++;
-    //   console.log("CountModer: " + countModer);
-    // } else {
-    //   alert("Error - not repeat roles");
-    // }
-
     if (promptValue === "admin" && countAdmin < 1) {
       countAdmin++;
       console.log("CountAdmin: " + countAdmin);
@@ -83,23 +66,19 @@ let rolesValidation = function () {
   }
 
   if (countAdmin === 1) {
-    alert("admin role: You have total access");
+    alert("admin role: You have total access\nsections: 1, 2 and 3");
   }
   if (countModer === 1) {
     alert(
-      "moderator role: You have access to the comments and moderate the content"
+      "moderator role: You have access to the comments and moderate the content\nsections: 1 and 3"
     );
   }
   if (countUser === 1) {
-    alert("user role: you have access of preview the comments");
+    alert("user role: you have access of preview the comments\nsections: 1");
   }
   if (countGuest === 1) {
     alert("guest role: you have access of public content");
   }
-
-  // switch(){
-  //   case
-  // }
 };
 
 function repetitiveQuestion() {
